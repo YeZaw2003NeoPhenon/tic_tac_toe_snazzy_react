@@ -1,0 +1,86 @@
+
+*,*::before , *::after{
+    box-sizing: border-box;
+}
+.board-container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    margin-top:5rem;
+}
+.board-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 25rem;
+}
+.square{
+ font-size:3rem;
+font-weight: bold;
+color:hsl(226, 60%, 46%);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+width:100px;
+height:100px;
+display:block;
+transition: background-color 0.3s ease;
+}
+.square.x {
+  background-color: lightblue;
+}
+
+.square.o {
+  background-color: lightgreen;
+}
+
+.square:hover{
+    transition:0.5s ease;
+    color:hsl(240, 57%, 45%);
+    background-color: hsl(28, 97%, 48%);
+}
+.status{
+    font-family: monospace;
+    font-weight: bold;
+    font-size:3rem;
+    margin-bottom:20px;
+    color:hsl(239, 98%, 42%);
+    font-display:initial;
+}
+.winning_square{
+    background-color: rgb(4, 255, 58);
+    animation: flash 1s infinite;
+  }
+
+  @keyframes flash {
+    0% { background-color:  rgb(4, 255, 58); }
+    50% { background-color: red; }
+    100% { background-color: rgb(4, 255, 58); }
+  }
+  .reset-btn{
+    display:block;
+    align-items:center;
+    border:none;
+    border-radius: 10px;
+    padding:10px 20px;
+    font-size:1.3rem;
+    color:#fff;
+    margin-top: -2rem;
+    background-color: hsla(0, 95%, 37%, 0.952);
+  }
+  .reset-btn:hover{
+    transform:scale(1.05)
+  }
+  .board-scores{
+    padding:30px 30px;
+    background-color: hsl(120, 42%, 58%);
+    border-radius: 20px;
+    margin-top:-2.5rem;
+    letter-spacing: 3px;
+    color:hsl(213, 100%, 40%);
+    font-size:1.8rem;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
+  }
+  .board-scores span{
+    color:hsl(0, 100%, 62%);
+  }

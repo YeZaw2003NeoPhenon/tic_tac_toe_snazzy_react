@@ -1,0 +1,28 @@
+.game-info{
+    display:flex;
+    flex-direction: column;
+    font-size: 2rem;
+    padding:10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-orderList{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    font-size: 3rem;
+    padding:5px 10px ;
+}
+.jump-btn{
+    font-size: 2rem;
+    padding:10px 10px;
+}
+.spinner{
+    display:flex;
+    align-items: center ;
+    justify-content: center;
+    margin-top:50rem;
+    height:100%;
+}
